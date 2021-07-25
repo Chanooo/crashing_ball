@@ -13,7 +13,12 @@ public class main_ball : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 v = new Vector3(0, 0.01f, 0);
-        transform.Translate(v);
+        if(Input.GetKey(KeyCode.Space))
+        {
+            Debug.Log("스페이스 키 누르고 있음");
+            Vector3 vector = new Vector3(0, 0.0001f, 0);
+            transform.Translate(vector);
+        }
+
     }
 }
